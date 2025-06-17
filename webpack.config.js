@@ -84,7 +84,12 @@ module.exports = {
     static: {
       directory: join(__dirname, "dist"),
     },
-    port: 5614,
+    port: 5084,
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers":
+        "Origin, X-Requested-With, Content-Type, Accept",
+    },
     historyApiFallback: {
       rewrites: [{ from: /./, to: "/404.html" }],
     },
